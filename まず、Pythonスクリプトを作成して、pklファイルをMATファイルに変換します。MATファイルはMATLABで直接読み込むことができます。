@@ -1,0 +1,9 @@
+import pickle
+import scipy.io
+
+# pklファイルを読み込む
+with open('data.pkl', 'rb') as f:
+    data = pickle.load(f)
+
+# MATファイルに保存する
+scipy.io.savemat('data.mat', {'data': data})

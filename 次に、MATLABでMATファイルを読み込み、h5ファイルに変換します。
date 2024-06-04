@@ -1,0 +1,6 @@
+% MATファイルを読み込む
+data = load('data.mat');
+
+% h5ファイルに保存する
+h5filename = 'data.h5';
+h5write(h5filename, '/data', data.data);
